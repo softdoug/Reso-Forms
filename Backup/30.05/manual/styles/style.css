@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #FCFCEE;
+}
+
+.header {
+    background-color: #228B22;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 75px;
+}
+
+.header .logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.header .logo a {
+    color: #fff;
+    font-size: 42px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.header .links {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+    font-size: 32px;
+}
+
+.header .links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .links a,
+.header .links a:after,
+.header .links a:before {
+    transition: all .5s;
+}
+
+.header .links a:hover {
+    color: #c8c8c8
+}
+
+.header .links a {
+    position: relative;
+}
+
+.header .links a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+
+.header .links a:hover:after {
+    width: 100%;
+}
+
+.header .links .non-right {
+    margin-right: 10px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.manual-text .manual-header {
+    text-align: center;
+}
+
+.manual-text {
+    display: flex;
+    margin: 0 75px;
+    max-width: 1120px;
+    padding: 65px 0;
+    text-align: start;
+    font-size: 32px;
+    flex-direction: column;
+}
+
+.greeting-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.greeting-bottom .links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 75px;
+    background-color: #0C78ED;
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.greeting-bottom .links a:hover {
+    background-color: #619fe2;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #165A16;
+    height: 85px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.footer>span {
+    margin-left: 75px;
+    font-size: 12px;
+}
+
+.footer .footer-right-side {
+    display: flex;
+    flex-direction: column;
+    margin-right: 75px;
+    font-size: 16px;
+}

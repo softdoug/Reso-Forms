@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборник бланков РЕСО-Гарантия</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body>
+    <div class="main">
+        <!--Header-->
+        <div class="header">
+            <div class="logo">
+                <div> <img src="img/logotype.png" alt="logotype"></div>
+                <a href="https://www.reso.ru/" target="_blank">РЕСО-Гарантия</a>
+            </div>
+            <nav class="links">
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                    </label>
+                <ul class="navbar-links menu">
+                    <li class="navbar-items"><a href="../index.html" class="non-right">Главная</a></li>
+                    <li class="navbar-items"><a href="#" class="non-right">Бланки</a></li>
+                    <li class="navbar-items"><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--/Header-->
+        <!--Content-->
+        <div class="content">
+            <!--Путь-->
+            <div class="path">
+                <a href="#" class="non-right test" id="test">Поиск бланков</a>
+            </div>
+            <!--/Путь-->
+            <div class="content-zayavlenie">
+                <span class="advice1">Выберите тип документа</span>
+                <div class="type-of-doc" id="typedoc">
+                    <button class="button-zayavlenie doc-types-inactive interactive-on" id="zayavlenie-id">Заявление</button>
+                    <button class="button-jaloba doc-types-inactive interactive-on" id="jaloba-id">Жалоба</button>
+                    <button class="button-hodataystvo doc-types-inactive interactive-on" id="hodataystvo-id">Ходатайство</button>
+                    <button class="button-zapros doc-types-inactive interactive-on" id="zapros-id">Запрос</button>
+                    <button class="button-inoe doc-types-inactive interactive-on" id="inoe-id">Иное</button>
+                </div>
+                <!--Заявление-->
+                <div class="doc-parameters" id="zayavlenie">
+                    <form class="visible" action="formdata" method="post" name="about">
+                        <select name="zayavlenie-list1">
+                            <option>О чем заявление?</option>
+                            <option value="1">О преступлении</option>
+                            <option value="2">О выдаче материалов</option>
+                            <option value="3">Об ознакомлении</option>
+                            <option value="4">О приобщении</option>
+                            <option value="5">Иное</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="send-to">
+                        <select name="zayavlenie-list2">
+                            <option>Кому адресовано?</option>
+                            <option value="1">МВД России</option>
+                            <option value="2">СК России</option>
+                            <option value="3">Прокуратура</option>
+                            <option value="4">Суд</option>
+                            <option value="5">Иное</option>
+                        </select>
+                    </form>
+                    <form class="form-visible" action="formdata" method="post" name="crime-character">
+                        <select name="zayavlenie-list3">
+                            <option>Особенности?</option>
+                            <option value="1">Общий бланк</option>
+                            <option value="2">Коллективное заявление</option>
+                            <option value="3">Группа убытков</option>
+                            <option value="4">Несколько преступлений, совершенных единым образом</option>
+                            <option value="5">О коррупционных действиях сотрудника МВД России</option>
+                            <option value="6">Угон/поджог</option>
+                            <option value="7">ДТП</option>
+                        </select>
+                    </form>
+                </div>
+                <!--/Заявление-->
+                <!--Жалоба-->
+                <div class="doc-parameters" id="jaloba">
+                    <form class="visible" action="formdata" method="post" name="about">
+                        <select name="jaloba-list1">
+                            <option>Какое нарушение?</option>
+                            <option value="1">ОВУД</option>
+                            <option value="2">ОВУД повторно</option>
+                            <option value="3">Нарушение сроков проверки/расследования</option>
+                            <option value="4">Пересылка направленной жалобы</option>
+                            <option value="5">Нарушения при ознакомлении с материалами УД</option>
+                            <option value="6">Общий бланк</option>
+                            <option value="7">Общий бланк повторно</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="send-to">
+                        <select name="jaloba-list2">
+                            <option>На какой стадии?</option>
+                            <option value="1">Доследственная проверка</option>
+                            <option value="2">Предварительное следствие</option>
+                            <option value="3">Дознание</option>
+                            <option value="4">УД направлено прокурору</option>
+                            <option value="5">Суд</option>
+                        </select>
+                    </form>
+                    <form class="form-visible" action="formdata" method="post" name="crime-character">
+                        <select name="jaloba-list3">
+                            <option>Процессуальный статус?</option>
+                            <option value="1">Потерпевший</option>
+                            <option value="2">Гражданский истец</option>
+                            <option value="3">Заинтересованное лицо</option>
+                            <option value="4">Заявитель (ПО ПРОВЕРКАМ)</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="send-to">
+                        <select name="jaloba-list4">
+                            <option>Кому адресована?</option>
+                            <option value="1">МВД России</option>
+                            <option value="2">СК России</option>
+                            <option value="3">Прокуратура</option>
+                            <option value="4">Суд</option>
+                            <option value="5">Иное</option>
+                        </select>
+                    </form>
+                </div>
+                <!--/Жалоба-->
+                <!--Ходатайство-->
+                <div class="doc-parameters" id="hodataystvo">
+                    <form class="visible" action="formdata" method="post" name="about">
+                        <select name="hodataystvo-list1">
+                            <option>Процессуальный статус?</option>
+                            <option value="1">Потерпевший</option>
+                            <option value="2">Гражданский истец</option>
+                            <option value="3">Иное заинтересованное лицо</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="about">
+                        <select name="hodataystvo-list2">
+                            <option>О чем?</option>
+                            <option value="1">Об ознакомлении с материалами УД</option>
+                            <option value="2">Об ознакомлении с заключением эксперта/постановлением о назначении экспертизы</option>
+                            <option value="3">О получении копий документов</option>
+                            <option value="4">О предоставлении документов</option>
+                            <option value="5">О допросе</option>
+                            <option value="6">О проведении следственных действий</option>
+                            <option value="7">О даче объяснений (ГР ИСТЕЦ)</option>
+                            <option value="8">О допуске представителя</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="send-to">
+                        <select name="hodataystvo-list3">
+                            <option>Кому адресовано?</option>
+                            <option value="1">МВД России</option>
+                            <option value="2">СК России</option>
+                            <option value="3">Суд</option>
+                            <option value="4">Иное</option>
+                        </select>
+                    </form>
+                </div>
+                <!--/Ходатайство-->
+                <!--Запрос-->
+                <div class="doc-parameters" id="zapros">
+                    <form class="visible" action="formdata" method="post" name="about">
+                        <select name="zapros-list1">
+                            <option>Процессуальный статус?</option>
+                            <option value="1">Потерпевший</option>
+                            <option value="2">Гражданский истец</option>
+                            <option value="3">Без процессуального статуса</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="send-to">
+                        <select name="zapros-list2">
+                            <option>Кому адресовано?</option>
+                            <option value="1">МВД России</option>
+                            <option value="2">СК России</option>
+                            <option value="3">Прокуратура</option>
+                            <option value="4">Суд</option>
+                            <option value="5">Иное</option>
+                        </select>
+                    </form>
+                    <form class="visible" action="formdata" method="post" name="about">
+                        <select name="zapros-list3">
+                            <option>О чем?</option>
+                            <option value="1">Запрос сведений/документов (общий бланк)</option>
+                            <option value="2">Непоступившего ответа</option>
+                            <option value="3">Сведений о прокурорской проверке(ДЛЯ ПРОКУРАТУРЫ)</option>
+                            <option value="4">Сведений о доследственной проверке</option>
+                            <option value="5">О статусе расследования уголовного дела</option>
+                            <option value="6">О статусе судебного разбирательства(СУД)</option>
+                            <option value="7">О вступлении в законную силу решения суда(СУД)</option>
+                        </select>
+                    </form>
+                </div>
+                <!--/Запрос-->
+                <!--Иное-->
+                <div class="doc-parameters" id="inoe">
+                    123
+                </div>
+                <!--/Иное-->
+                <!--Кнопка-->
+                <button type="submit" form="++++++++" id="done">Подобрать</button>
+                <!--/Кнопка-->
+            </div>
+        </div>
+        <!--/Content-->
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <span>ver. 1.1.x // 26.04.2022</span>
+        <div class="footer-right-side">
+            <span>Автор: Лев Е. Василенко</span>
+            <span>Если Вы нашли ошибку - сообщите по адресу: vasle@reso.ru</span>
+        </div>
+    </div>
+    <!--/Footer-->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

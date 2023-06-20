@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборник бланков РЕСО-Гарантия</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/nones.css">
+</head>
+
+<body>
+    <div class="main">
+        <!--Header-->
+        <div class="header">
+            <div class="logo">
+                <div> <img src="img/logotype.png" alt="logotype"></div>
+                <a href="https://www.reso.ru/" target="_blank">РЕСО-Гарантия</a>
+            </div>
+            <nav class="links">
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                    </label>
+                <ul class="navbar-links menu">
+                    <li class="navbar-items"><a href="../index.html" class="non-right">Главная</a></li>
+                    <li class="navbar-items"><a href="#" class="non-right">Бланки</a></li>
+                    <li class="navbar-items"><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--/Header-->
+        <!--Content-->
+        <div id="search-panel">
+            <div class="content">
+                <!--Путь-->
+                <div class="path">
+                    <a href="nav_main.html" class="non-right test" id="test">Поиск бланков</a>
+                </div>
+                <!--/Путь-->
+                <div class="content-zayavlenie">
+                    <span class="advice1">Выберите тип документа</span>
+                    <div class="type-of-doc" id="typedoc">
+                        <button class="button-zayavlenie doc-types-inactive interactive-on" id="zayavlenie-id">Заявление</button>
+                        <button class="button-jaloba doc-types-inactive interactive-on" id="jaloba-id">Жалоба</button>
+                        <button class="button-hodataystvo doc-types-inactive interactive-on" id="hodataystvo-id">Ходатайство</button>
+                        <button class="button-zapros doc-types-inactive interactive-on" id="zapros-id">Запрос</button>
+                        <button class="button-inoe doc-types-inactive interactive-on" id="inoe-id">Иное</button>
+                    </div>
+                    <!--Заявление-->
+                    <div id="parameter-listener">
+                        <div class="doc-parameters" id="zayavlenie">
+                            <form class="visible" action="formdata" method="post" name="about">
+                                <select id="zayavlenie-select-about" name="zayavlenie-list1">
+                                <option>О чем заявление?</option>
+                                <option value="1" id="zayavlenie-option">О преступлении</option>
+                                <option value="2">О выдаче материалов</option>
+                                <option value="3">Об ознакомлении</option>
+                                <option value="4">О приобщении</option>
+                                <option value="5">Иное</option>
+                            </select>
+                            </form>
+                            <form class="visible" action="formdata" method="post" name="crime-character">
+                                <select id="zayavlenie-select-properties" name="zayavlenie-list2">
+                                <option value="0">Особенности?</option>
+                                <option value="1">Общий бланк</option>
+                                <option value="2">Коллективное заявление</option>
+                                <option value="3">Группа убытков</option>
+                                <option value="4">Несколько преступлений, совершенных единым образом</option>
+                                <option value="5">О коррупционных действиях сотрудника МВД России</option>
+                                <option value="6">Угон/поджог</option>
+                                <option value="7">ДТП</option>
+                            </select>
+                            </form>
+                        </div>
+                        <!--/Заявление-->
+                        <!--Жалоба-->
+                        <div class="doc-parameters" id="jaloba">
+                            <form class="visible" action="formdata" method="post" name="send-to">
+                                <select id="jaloba-select-stage" name="jaloba-list1">
+                                <option>На какой стадии?</option>
+                                <option value="1">Доследственная проверка</option>
+                                <option value="2">Предварительное следствие/Дознание</option>
+                                <option value="3">УД направлено прокурору</option>
+                                <option value="4">Судебное разбирательство</option>
+                            </select>
+                            </form>
+                            <form class="visible" action="formdata" method="post">
+                                <select id="jaloba-select-status">
+                                <option value="0">Процессуальный статус?</option>
+                                <option value="1">Потерпевший</option>
+                                <option value="2">Гражданский истец</option>
+                                <option value="3">Заинтересованное лицо</option>
+                                <option value="4">Заявитель</option>
+                            </select>
+                            </form>
+                            <form class="visible" action="formdata" method="post" name="about">
+                                <select id="jaloba-select-which" name="jaloba-list3">
+                                <option value="0">Какое нарушение?</option>
+                                <option value="1">ОВУД</option>
+                                <option value="2">ОВУД повторно</option>
+                                <option value="3">Нарушение сроков доследственной проверки</option>
+                                <option value="4">Нарушение сроков следствия</option>
+                                <option value="5">Нарушение сроков дознания</option>
+                                <option value="6">Пересылка направленной жалобы</option>
+                                <option value="7">Нарушения при ознакомлении с материалами УД</option>
+                                <option value="8">Общий бланк</option>
+                                <option value="9">Общий бланк повторно</option>
+                            </select>
+                            </form>
+                        </div>
+                        <!--/Жалоба-->
+                        <!--Ходатайство-->
+                        <div class="doc-parameters" id="hodataystvo">
+                            <form class="visible" action="formdata" method="post" name="about">
+                                <select id="hodataystvo-select-status" name="hodataystvo-list1">
+                                <option>Процессуальный статус?</option>
+                                <option value="1">Потерпевший</option>
+                                <option value="2">Гражданский истец</option>
+                                <option value="3">Иное заинтересованное лицо</option>
+                            </select>
+                            </form>
+                            <form class="visible" action="formdata" method="post" name="about">
+                                <select id="hodataystvo-select-about" name="hodataystvo-list2">
+                                <option value="0">О чем?</option>
+                                <option value="1">Об ознакомлении с материалами УД</option>
+                                <option value="2">Об ознакомлении с заключением эксперта/постановлением о назначении экспертизы</option>
+                                <option value="3">О получении копий документов</option>
+                                <option value="4">О приобщении документов</option>
+                                <option value="5">О допросе</option>
+                                <option value="6">О проведении следственных действий</option>
+                                <option value="7">О даче объяснений</option>
+                                <option value="8">О допуске представителя</option>
+                            </select>
+                            </form>
+                        </div>
+                        <!--/Ходатайство-->
+                        <!--Запрос-->
+                        <div class="doc-parameters" id="zapros">
+                            <form class="visible" action="formdata" method="post" name="about">
+                                <select id="zapros-select-status" name="zapros-list1">
+                                <option>Процессуальный статус?</option>
+                                <option value="1">Потерпевший</option>
+                                <option value="2">Гражданский истец</option>
+                                <option value="3">Без процессуального статуса</option>
+                            </select>
+                            </form>
+                            <form class="visible" action="formdata" method="post" name="about">
+                                <select id="zapros-select-about" name="zapros-list2">
+                                <option>О чем?</option>
+                                <option value="1">Запрос сведений/документов (общий бланк)</option>
+                                <option value="2">Непоступившего ответа</option>
+                                <option value="3">Сведений о прокурорской проверке</option>
+                                <option value="4">Сведений о доследственной проверке</option>
+                                <option value="5">О статусе расследования уголовного дела</option>
+                                <option value="6">О статусе судебного разбирательства</option>
+                                <option value="7">О вступлении в законную силу решения суда</option>
+                            </select>
+                            </form>
+                        </div>
+                        <!--/Запрос-->
+                        <!--Иное-->
+                        <div class="doc-parameters" id="inoe">
+                            В разработке
+                        </div>
+                        <!--/Иное-->
+                    </div>
+                    <!--Кнопка-->
+                    <button type="submit" form="++++++++" id="done">Подобрать</button>
+                    <!--/Кнопка-->
+                </div>
+            </div>
+        </div>
+        <div id="result-panel">
+            <div class="content">
+                <!--Путь-->
+                <div class="path">
+                    <a href="nav_main.html" class="non-right">Поиск бланков</a> > <a href="result.html" class="non-left">Результат</a>
+                </div>
+                <!--/Путь-->
+                <div class="content-zayavlenie-result">
+                    <div id="results-zayavlenie">
+                        <span id="z">Заявления</span>
+                        <ul id="list-zayavlenie">
+                            <ul id="o-chem">
+                                <li class="under-header" id="z1">О преступлении</li>
+                                <ul id="z-1-len">
+                                    <ul id="z11">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_obshiyBlank.doc" download><img id="save-logo" src="img/save.png"></a> Общий бланк
+                                    </ul>
+                                    <li id="z12">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_kollektivnoe.doc" download><img id="save-logo" src="img/save.png"></a> Коллективное заявление
+                                    </li>
+                                    <li id="z13">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_gruppaUbytkov.doc" download><img id="save-logo" src="img/save.png"></a> Группа убытков
+                                    </li>
+                                    <li id="z14">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_neskolkoPrestupleniy.doc" download><img id="save-logo" src="img/save.png"></a> Несколько преступлений, совершенных единым способом
+                                    </li>
+                                    <li id="z15">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_oKorrupciiMVD.doc" download><img id="save-logo" src="img/save.png"></a> О коррупционных действиях сотрудника МВД
+                                    </li>
+                                    <li id="z16">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_ugonPodjog.doc" download><img id="save-logo" src="img/save.png"></a> Угон/поджог
+                                    </li>
+                                    <li id="z17">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPrestuplenii_DTP.doc" download><img id="save-logo" src="img/save.png"></a> ДТП
+                                    </li>
+                                </ul>
+                                <li class="under-header" id="z2">О выдаче материалов</li>
+                                <ul id="z-2-len">
+                                    <li id="z21">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oVydache_procReshenie.doc" download><img id="save-logo" src="img/save.png"></a> О выдаче процессуального решения
+                                    </li>
+                                </ul>
+                                <li class="under-header" id="z3">Об ознакомлении</li>
+                                <ul id="z-3-len">
+                                    <li id="z31">
+                                        <a href="blanks/Zayavleniya/zayavlenie_obOznakomlenii_sMaterialamiObrasheniya_MVD.doc" download><img id="save-logo" src="img/save.png"></a> С материалами рассмотрения обращения в МВД
+                                    </li>
+                                    <li id="z32">
+                                        <a href="blanks/Zayavleniya/zayavlenie_obOznakomlenii_sMaterialamiObrasheniya_Prokuratura.doc" download><img id="save-logo" src="img/save.png"></a> С материалами рассмотрения обращения в Прокуратуре
+                                    </li>
+                                    <li id="z33">
+                                        <a href="blanks/Zayavleniya/zayavlenie_obOznakomlenii_sMaterialamiObrasheniya_obshiyBlank.doc" download><img id="save-logo" src="img/save.png"></a> С материалами рассмотрения обращения общий бланк
+                                    </li>
+                                </ul>
+                                <li class="under-header" id="z4">О приобщении</li>
+                                <ul id="z-4-len">
+                                    <li id="z41">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPriobshenii_kMaterialamUD.doc" download><img id="save-logo" src="img/save.png"></a> Приобщение к материалам УД
+                                    </li>
+                                    <li id="z42">
+                                        <a href="blanks/Zayavleniya/zayavlenie_oPriobshenii_kMaterialamDosledProverki.doc" download><img id="save-logo" src="img/save.png"></a> Приобщение к материалам доследственной проверки
+                                    </li>
+                                </ul>
+                                <li class="under-header" id="z5">Иное</li>
+                                <ul id="z-5-len">
+                                    <li id="z51">
+                                        <a href="blanks/Zayavleniya/zayavlenie_inoe_oPriznaniiPoterpevshim.doc" download><img id="save-logo" src="img/save.png"></a> Заявление о признании потерпевшим
+                                    </li>
+                                    <li id="z52">
+                                        <a href="blanks/Zayavleniya/zayavlenie_inoe_oDopuskePredstavitelyaPoterpevshego.doc" download><img id="save-logo" src="img/save.png"></a> Заявление о допуске представителя потерпевшего
+                                    </li>
+                                    <li id="z53">
+                                        <a href="blanks/Zayavleniya/zayavlenie_inoe_grajdanskiyIsk.doc" download><img id="save-logo" src="img/save.png"></a> Заявление исковое (гражданиский иск)
+                                    </li>
+                                    <li id="z54">
+                                        <a href="blanks/Zayavleniya/zayavlenie_inoe_obOtkazeOtGrajdanskogoIska.doc" download><img id="save-logo" src="img/save.png"></a> Заявление об отказе от гражданского иска
+                                    </li>
+                                    <li id="z55">
+                                        <a href="blanks/Zayavleniya/zayavlenie_inoe_obUstraneniiNarusheniyPoRassmotreniuObrasheniya.doc" download><img id="save-logo" src="img/save.png"></a> Заявление об устранении нарушений, связанных с рассмотрением обращения
+                                    </li>
+                                    <li id="z56">
+                                        <a href="blanks/Zayavleniya/zayavlenie_inoe_onedopustimostiRassmotreniyaRaneePodannoyJalobyTemjeLicom.doc" download><img id="save-logo" src="img/save.png"></a> Заявление (жалоба) о недопустимости рассмотрения ранее поданной жалобы тем же лицом (органом МВД), чьи действия обжаловались
+                                    </li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="results-jaloba">
+                        <span id="j" class="under-header">Жалобы</span>
+                        <ul id="list-jaloba">
+                            <ul id="stage">
+                                <li id="j1" class="under-header">Доследственная проверка</li>
+                                <ul id="j-1-len">
+                                    <li id="j13" class="under-header">Заинтересованное лицо</li>
+                                    <ul id="j-13-len">
+                                        <li id="j131">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>ОВУД (Заинтересованное лицо)</li>
+                                        <li id="j132">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>ОВУД повторно (Заинтересованное лицо)</li>
+                                        <li id="j133">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков доследственной проверки(Заявитель)</li>
+                                        <li id="j136">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Заинтересованное лицо)</li>
+                                        <li id="j138">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Заинтересованное лицо)</li>
+                                        <li id="j139">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Заинтересованное лицо)</li>
+                                    </ul>
+                                    <li id="j14" class="under-header">Заявитель</li>
+                                    <ul id="j-14-len">
+                                        <li id="j141">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>ОВУД(Заявитель)</li>
+                                        <li id="j142">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>ОВУД повторно(Заявитель)</li>
+                                        <li id="j143">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков доследственной проверки(Заинтересованное лицо)</li>
+                                        <li id="j146">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Заявитель)</li>
+                                        <li id="j148">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Заявитель)</li>
+                                        <li id="j149">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Заявитель)</li>
+                                    </ul>
+                                </ul>
+                                <li id="j2" class="under-header">Предварительное следствие/дознание</li>
+                                <ul id="j-2-len">
+                                    <li id="j21" class="under-header">Потерпевший</li>
+                                    <ul id="j-21-len">
+                                        <li id="j214">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Потерпевший)</li>
+                                        <li id="j215">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Потерпевший)</li>
+                                        <li id="j216">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Потерпевший)</li>
+                                        <li id="j217">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Потерпевший)</li>
+                                        <li id="j218">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Потерпевший)</li>
+                                        <li id="j219">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Потерпевший)</li>
+                                    </ul>
+                                    <li id="j22" class="under-header">Гражданский истец</li>
+                                    <ul id="j-22-len">
+                                        <li id="j224">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Гражданский истец)</li>
+                                        <li id="j225">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Гражданский истец)</li>
+                                        <li id="j226">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Гражданский истец)</li>
+                                        <li id="j227">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Гражданский истец)</li>
+                                        <li id="j228">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Гражданский истец)</li>
+                                        <li id="j229">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Гражданский истец)</li>
+                                    </ul>
+                                    <li id="j23" class="under-header">Заинтересованное лицо</li>
+                                    <ul id="j-23-len">
+                                        <li id="j234">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Заинтересованное лицо)</li>
+                                        <li id="j235">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Заинтересованное лицо)</li>
+                                        <li id="j236">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Заинтересованное лицо)</li>
+                                        <li id="j237">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Заинтересованное лицо)</li>
+                                        <li id="j238">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Заинтересованное лицо)</li>
+                                        <li id="j239">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Заинтересованное лицо)</li>
+                                    </ul>
+                                </ul>
+                                <li id="j3" class="under-header">УД направлено прокурору</li>
+                                <ul id="j-3-len">
+                                    <li id="j31" class="under-header">Потерпевший</li>
+                                    <ul id="j-31-len">
+                                        <li id="j314">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Потерпевший)</li>
+                                        <li id="j315">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Потерпевший)</li>
+                                        <li id="j316">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Потерпевший)</li>
+                                        <li id="j317">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Потерпевший)</li>
+                                        <li id="j318">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Потерпевший)</li>
+                                        <li id="j319">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Потерпевший)</li>
+                                    </ul>
+                                    <li id="j32" class="under-header">Гражданский истец</li>
+                                    <ul id="j-32-len">
+                                        <li id="j324">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Гражданский истец)</li>
+                                        <li id="j325">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Гражданский истец)</li>
+                                        <li id="j326">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Гражданский истец)</li>
+                                        <li id="j327">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Гражданский истец)</li>
+                                        <li id="j328">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Гражданский истец)</li>
+                                        <li id="j329">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Гражданский истец)</li>
+                                    </ul>
+                                    <li id="j33" class="under-header">Заинтересованное лицо</li>
+                                    <ul id="j-33-len">
+                                        <li id="j334">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Заинтересованное лицо)</li>
+                                        <li id="j335">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Заинтересованное лицо)</li>
+                                        <li id="j336">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Заинтересованное лицо)</li>
+                                        <li id="j337">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Заинтересованное лицо)</li>
+                                        <li id="j338">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Заинтересованное лицо)</li>
+                                        <li id="j339">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Заинтересованное лицо)</li>
+                                    </ul>
+                                </ul>
+                                <li id="j4" class="under-header">Судебное разбирательство</li>
+                                <ul id="j-4-len">
+                                    <li id="j41" class="under-header">Потерпевший</li>
+                                    <ul id="j-41-len">
+                                        <li id="j414">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Потерпевший)</li>
+                                        <li id="j415">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Потерпевший)</li>
+                                        <li id="j416">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Потерпевший)</li>
+                                        <li id="j417">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Потерпевший)</li>
+                                        <li id="j418">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Потерпевший)</li>
+                                        <li id="j419">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Потерпевший)</li>
+                                    </ul>
+                                    <li id="j42" class="under-header">Гражданский истец</li>
+                                    <ul id="j-42-len">
+                                        <li id="j424">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Гражданский истец)</li>
+                                        <li id="j425">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Гражданский истец)</li>
+                                        <li id="j426">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Гражданский истец)</li>
+                                        <li id="j427">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Гражданский истец)</li>
+                                        <li id="j428">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Гражданский истец)</li>
+                                        <li id="j429">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Гражданский истец)</li>
+                                    </ul>
+                                    <li id="j43" class="under-header">Заинтересованное лицо</li>
+                                    <ul id="j-43-len">
+                                        <li id="j434">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков следствия (Заинтересованное лицо)</li>
+                                        <li id="j435">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушение сроков дознания (Заинтересованное лицо)</li>
+                                        <li id="j436">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Пересылка направленной жалобы (Заинтересованное лицо)</li>
+                                        <li id="j437">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Нарушения при ознакомлении с материалами УД (Заинтересованное лицо)</li>
+                                        <li id="j438">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк (Заинтересованное лицо)</li>
+                                        <li id="j439">
+                                            <a href="№" download><img id="save-logo" src="img/save.png"></a>Общий бланк повторно (Заинтересованное лицо)</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="results-hodataystvo">
+                        <span class="under-header">Ходатайства</span>
+                        <ul id="list-hodataystvo">
+                            <ul id="status">
+                                <li id="h1" class="under-header">Потерпевший</li>
+                                <ul id="h-1-len">
+                                    <li id="h11">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Об ознакомлении с материалами УД</li>
+                                    <li id="h12">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Об ознакомлении с заключением эксперта/постановлением о назначении экспертизы</li>
+                                    <li id="h13">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О получении копий документов</li>
+                                    <li id="h14">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О приобщении документов</li>
+                                    <li id="h15">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О допросе</li>
+                                    <li id="h16">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О проведении следственных действий</li>
+                                    <li id="h18">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О допуске представителя</li>
+                                </ul>
+                                <li id="h2" class="under-header">Гражданский истец</li>
+                                <ul>
+                                    <li id="h21">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Об ознакомлении с материалами УД</li>
+                                    <li id="h22">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Об ознакомлении с заключением эксперта/постановлением о назначении экспертизы</li>
+                                    <li id="h23">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О получении копий документов</li>
+                                    <li id="h24">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О приобщении документов</li>
+                                    <li id="h25">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О проведении следственных действий</li>
+                                    <li id="h26">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О даче объяснений</li>
+                                    <li id="h28">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О допуске представителя</li>
+                                </ul>
+                                <li id="h3" class="under-header">Иное заинтересованное лицо</li>
+                                <ul>
+                                    <li id="h31">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Об ознакомлении с материалами УД</li>
+                                    <li id="h32">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Об ознакомлении с заключением эксперта/постановлением о назначении экспертизы</li>
+                                    <li id="h33">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О получении копий документов</li>
+                                    <li id="h34">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О приобщении документов</li>
+                                    <li id="h35">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О допросе</li>
+                                    <li id="h36">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О проведении следственных действий</li>
+                                    <li id="h38">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О допуске представителя</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="results-zapros">
+                        <span class="under-header">Запросы</span>
+                        <ul id="list-zapros">
+                            <ul id="status">
+                                <li id="a1" class="under-header">Потерпевший</li>
+                                <ul>
+                                    <li id="a11">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Запрос сведений/документов (общий бланк)</li>
+                                    <li id="a12">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Непоступившего ответа</li>
+                                    <li id="a15">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О статусе расследования уголовного дела</li>
+                                    <li id="a16">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О статусе судебного разбирательства</li>
+                                    <li id="a17">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О вступлении в законную силу решения суда</li>
+                                </ul>
+                                <li id="a2" class="under-header">Гражданский истец</li>
+                                <ul>
+                                    <li id="a21">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Запрос сведений/документов (общий бланк)</li>
+                                    <li id="a22">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Непоступившего ответа</li>
+                                    <li id="a25">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О статусе расследования уголовного дела</li>
+                                    <li id="a26">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О статусе судебного разбирательства</li>
+                                    <li id="a27">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О вступлении в законную силу решения суда</li>
+                                </ul>
+                                <li id="a3" class="under-header">Иное заинтересованное лицо</li>
+                                <ul>
+                                    <li id="a31">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Запрос сведений/документов (общий бланк)</li>
+                                    <li id="a32">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>Непоступившего ответа</li>
+                                    <li id="a33">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О прокурорской проверке</li>
+                                    <li id="a34">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О доследственной проверке</li>
+                                    <li id="a35">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О статусе расследования уголовного дела</li>
+                                    <li id="a36">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О статусе судебного разбирательства</li>
+                                    <li id="a37">
+                                        <a href="№" download><img id="save-logo" src="img/save.png"></a>О вступлении в законную силу решения суда</li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="result-err">
+                        <span id="err-text">Вернитесь в меню выбора параметров и отметьте необходимые соответствующие значения.</span>
+                    </div>
+                    <!--Кнопка-->
+                    <a type="submit" form="++++++++" id="back" href="nav_main.html">Назад</a>
+                    <!--/Кнопка-->
+                </div>
+            </div>
+        </div>
+        <!--/Content-->
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <span>ver. 1.1.x // 26.04.2022</span>
+        <div class="footer-right-side">
+            <span>Автор: Лев Е. Василенко</span>
+            <span>Если Вы нашли ошибку - сообщите по адресу: vasle@reso.ru</span>
+        </div>
+    </div>
+    <!--/Footer-->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
